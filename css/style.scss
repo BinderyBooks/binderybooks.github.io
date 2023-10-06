@@ -1,36 +1,40 @@
-// Fonts
-@import url("https://use.typekit.net/zwx5qhm.css");
-
+@import url("https://use.typekit.net/vcd1fek.css");
 @font-face {
   font-family: "Novaletra Regular";
-  src:
-    url("../fonts/NovaletraSerifCF-Regular.woff") format("woff"),
-    url("../fonts/NovaletraSerifCF-Regular.woff2") format("woff2");
+  src: url("../fonts/NovaletraSerifCF-Regular.woff") format("woff"), url("../fonts/NovaletraSerifCF-Regular.woff2") format("woff2");
 }
 
-// Variables
+@font-face {
+  font-family: "ff-scala-sc";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/ScalaScWeb.woff") format("woff");
+}
+
+@font-face {
+  font-family: "ff-scala-sans-sc";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/ScalaSansScWebPro.woff") format("woff");
+}
 
 :root {
-
-  --black: rgba(0, 0, 0, 0.99);
+  --black: rgba(255, 0, 0, 0.99);
   --black-75: rgba(0, 0, 0, 0.75);
   --black-50: rgba(0, 0, 0, 0.50);
   --black-25: rgba(0, 0, 0, 0.25);
   --black-10: rgba(0, 0, 0, 0.10);
-
   --soft-black: rgba(36, 30, 28, 1.0);
   --mist: rgba(202, 206, 199, 1.0);
   --paper: rgba(255, 253, 251, 1.0);
   --sand: rgba(242, 237, 227, 1.0);
   --white: rgba(255, 255, 255, 1.0);
-
-  --scala-sans: "ff-scala-sans-web-pro", sans-serif;
-  --scala-sans-sc: "ff-scala-sans-web-pro-sc", sans-serif;
-  --scala: "ff-scala-web", serif;
-  --scala-sc: "ff-scala-web-sc", serif;
+  --scala: "ff-scala", serif;
+  --scala-sc: "ff-scala-sc", serif;
+  --scala-sans: "ff-scala-sans-pro", sans-serif;
+  --scala-sans-sc: "ff-scala-sans-sc";
   --novaletra-regular: "Novaletra Regular";
 }
-
 
 ::-moz-selection {
   background: #b3d4fc;
