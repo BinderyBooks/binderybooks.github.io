@@ -26,6 +26,7 @@
   --paper: rgba(255, 253, 251, 1.0);
   --sand: rgba(242, 237, 227, 1.0);
   --white: rgba(255, 255, 255, 1.0);
+  --pitchfest: rgba(94, 210, 208, 1.0);
   --scala: "ff-scala", serif;
   --scala-sc: "ff-scala-sc", serif;
   --scala-sans: "ff-scala-sans-pro", sans-serif;
@@ -98,9 +99,13 @@ a.button {
   letter-spacing: .05em;
   background: #febb0f;
   border-radius: 999em;
-  border: none; }
+  border: none;
+  white-space: nowrap; }
   a.button:hover {
     border: none; }
+  a.button.inverted {
+    background: var(--soft-black);
+    color: var(--white); }
 
 header[role=banner] {
   display: flex;
@@ -190,6 +195,7 @@ footer[role=footer] {
   .introduction article {
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     margin: 2em 0;
@@ -201,12 +207,15 @@ footer[role=footer] {
       font-size: 2rem;
       text-align: center; }
     .introduction article p {
-      text-align: center; }
+      text-align: center;
+      margin-bottom: 2rem; }
       .introduction article p em {
         font-family: var(--scala-sans-sc);
         text-transform: lowercase;
         letter-spacing: .10em;
         font-style: normal; }
+    .introduction article.blurb {
+      padding: 8rem 4rem; }
 
 .feature-block {
   display: flex;
@@ -279,6 +288,7 @@ footer[role=footer] {
     justify-content: center;
     padding: 2em 0; }
     .tastemaker-block .tastemakers .tastemaker {
+      position: relative;
       max-width: 10em;
       margin: 0 1em; }
       .tastemaker-block .tastemakers .tastemaker img {
@@ -324,6 +334,80 @@ footer[role=footer] {
               color: #241e1c; }
             .tastemaker-block .tastemakers .tastemaker ul li a:hover svg {
               fill: #241e1c; }
+      .tastemaker-block .tastemakers .tastemaker .pitchfest-mini-banner {
+        background-image: url("../img/pitchfest-mini-banner.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 75.6px;
+        height: 21.84px;
+        background-size: 100% 100%;
+        top: 1rem;
+        right: 0; }
+        .tastemaker-block .tastemakers .tastemaker .pitchfest-mini-banner p {
+          margin-left: -2px;
+          color: var(--primary-soft-black, #241E1C);
+          font-family: Novaletra Serif CF;
+          font-size: 8px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 125%;
+          /* 12.5px */
+          letter-spacing: 1.6px;
+          text-transform: uppercase;
+          padding-top: 7px; }
+
+.pitchfest {
+  background-color: var(--pitchfest);
+  /* background-image: url("../img/pitchfest-banner.svg"); */
+  background-image: url('data:image/svg+xml;utf8,<svg width="905" height="243" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.6" d="M0.746444 0.5H904.254L854.538 121.31L854.459 121.5L854.538 121.69L904.254 242.5H0.746443L50.4624 121.69L50.5407 121.5L50.4624 121.31L0.746444 0.5Z" stroke="white"/></svg>');
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 5px 6px;
+  display: flex;
+  max-width: 768px;
+  align-self: center; }
+  .pitchfest > .pitchfest-inner {
+    padding: 43px 105px;
+    display: flex;
+    align-items: flex-start;
+    /* This has its own media query because it doesn't fit the main one. */ }
+    @media (max-width: 740px) {
+      .pitchfest > .pitchfest-inner {
+        padding: 43px 50px;
+        flex-direction: column;
+        align-items: center; } }
+
+.pitchfest-info {
+  padding-top: 1rem; }
+  .pitchfest-info h2 {
+    color: var(--primary-soft-black, #241E1C);
+    font-family: var(--novaletra-regular);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    /* 25px */
+    letter-spacing: 5.2px;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem; }
+  .pitchfest-info .pitchfest-description {
+    margin-bottom: 2rem; }
+  .pitchfest-info p {
+    color: var(--primary-soft-black, #241E1C);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: var(--scala-sans);
+    margin-bottom: 0.5rem; }
+  @media (max-width: 740px) {
+    .pitchfest-info {
+      text-align: center; } }
+
+.pitchfest-logo {
+  width: 10.5rem;
+  height: 10.5rem;
+  margin-right: 2rem; }
 
 .press {
   display: flex;
