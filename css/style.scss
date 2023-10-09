@@ -1209,10 +1209,12 @@ a.inline-link {
       margin: .5em 0;
     }
   }
+}
 
-  .email-form {
-    margin-bottom: 2rem;
-  }
+.email-form {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
 
   input {
     border-radius: 4px;

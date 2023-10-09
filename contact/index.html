@@ -36,11 +36,16 @@
   <script>
     async function subscribe(event) {
       event.preventDefault();
+      const email = encodeURIComponent(event.target.form[0].value);
+      if (!email) {
+        console.log('no email');
+        return;
+      }
+
       event.target.disabled = true;
       const successMessage = document.querySelector('.email-success');
       successMessage.style.display = 'none';
 
-      const email = encodeURIComponent(event.target.form[0].value);
       const response = await fetch(`https://global.binderybooks.ngrok.dev/api/v2/public/email/${email}`, { method: 'POST' });
       console.log('response', response);
       event.target.disabled = false;

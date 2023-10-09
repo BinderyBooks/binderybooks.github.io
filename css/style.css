@@ -944,9 +944,12 @@ a.inline-link {
     list-style-position: outside; }
     .contact ul li {
       margin: .5em 0; }
-  .contact .email-form {
-    margin-bottom: 2rem; }
-  .contact input {
+
+.email-form {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column; }
+  .email-form input {
     border-radius: 4px;
     border: 1px solid var(--primary-dove-gray, #CACEC7);
     background: #FFF;
@@ -956,7 +959,7 @@ a.inline-link {
     padding-left: 20px;
     font-family: var(--scala-sans);
     margin-bottom: 1rem; }
-  .contact .button {
+  .email-form .button {
     align-self: flex-start; }
 
 .privacy,

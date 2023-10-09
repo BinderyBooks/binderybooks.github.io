@@ -34,6 +34,28 @@
 
 <body>
 
+<script>
+  async function subscribe(event) {
+    event.preventDefault();
+
+    const email = encodeURIComponent(event.target.form[0].value);
+    if (!email) {
+      console.log('no email');
+      return;
+    }
+
+    event.target.disabled = true;
+    const successMessage = document.querySelector('.email-success');
+    successMessage.style.display = 'none';
+
+    const response = await fetch(`https://global.binderybooks.ngrok.dev/api/v2/public/email/${email}`, { method: 'POST' });
+    console.log('response', response);
+    event.target.disabled = false;
+
+    successMessage.style.display = 'block';
+  }
+</script>
+
 <div class="wrapper">
 <div class="container">
 
@@ -65,11 +87,14 @@
     </header>
 
     <section class="intro">
-        <p>Our mission is to break open new markets for deserving authors by empowering tastemakers and their reader communities. Our vision is to contribute to a more creative, independent, and equitable world of books.</p>
-
-        <p>An overwhelming number of options exist today for authors—self-publishing, crowdfunding, hybrid, and traditional publishing paths—all serving different needs for different kinds of authors. We’ve worked within all of these models, and our team and tastemakers include authors who have also run the gamut.</p>
-
-        <p>A real gap exists for the authors who aren’t well served by any of these models. There are so many great writers who don’t fit into a predefined shelf, those who are writing for a readership publishers don’t yet know how to reach. So many writers don’t have a large platform to directly reach existing reading communities—or the resources to self-publish successfully. Bindery is designed to create a new pathway for important voices the industry has overlooked and a viable way to reach their readers.</p>
+      <p>Bindery publishes adult and YA fiction across genres. We work with literary agents to ensure tastemakers receive manuscripts that suit their criteria.</p>
+      <p>We believe many talented writers do not have agents, so we open submissions to unagented authors periodically with a Bindery Pitchfest. Because reviewing submissions takes a lot of time, and Bindery’s tastemakers are personally responsible, we can only hold short open submission windows.</p>
+      <p>If you would like to be kept in the loop to be notified of future Pitchfest dates, drop your email here. We’ll give you plenty of advance notice to prepare your materials.</p>
+      <form onsubmit="return false;" class="email-form">
+        <input type="email" name="email" placeholder="Enter email" />
+        <p style="display: none;" class="email-success">Done!</p>
+        <button type="button" class="button" onclick="subscribe(event)">Get Updates</button>
+      </form>
     </section>
 
 
