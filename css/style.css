@@ -363,7 +363,7 @@ footer[role=footer] {
 .pitchfest {
   background-color: var(--pitchfest);
   /* background-image: url("../img/pitchfest-banner.svg"); */
-  background-image: url('data:image/svg+xml;utf8,<svg width="905" height="243" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.6" d="M0.746444 0.5H904.254L854.538 121.31L854.459 121.5L854.538 121.69L904.254 242.5H0.746443L50.4624 121.69L50.5407 121.5L50.4624 121.31L0.746444 0.5Z" stroke="white"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" width="905" height="243" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.6" d="M0.746444 0.5H904.254L854.538 121.31L854.459 121.5L854.538 121.69L904.254 242.5H0.746443L50.4624 121.69L50.5407 121.5L50.4624 121.31L0.746444 0.5Z" stroke="white"/></svg>');
   background-origin: content-box;
   background-repeat: no-repeat;
   background-size: 100% 100%;
