@@ -1198,6 +1198,7 @@ a.inline-link {
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   ul {
@@ -1206,7 +1207,11 @@ a.inline-link {
     list-style-type: disc;
     list-style-position: outside;
     li {
-      margin: .5em 0;
+      &:not(:first-child) {
+        margin-top: .5em;
+      }
+
+      margin-bottom: .5em;
     }
   }
 }

@@ -936,14 +936,17 @@ a.inline-link {
     /* 23.75px */
     letter-spacing: 4px;
     text-transform: uppercase;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
   .contact ul {
     margin: 0 0 1em 0;
     padding-left: 1rem;
     list-style-type: disc;
     list-style-position: outside; }
     .contact ul li {
-      margin: .5em 0; }
+      margin-bottom: .5em; }
+      .contact ul li:not(:first-child) {
+        margin-top: .5em; }
 
 .email-form {
   margin-bottom: 2rem;
