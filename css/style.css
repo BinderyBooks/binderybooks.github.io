@@ -537,6 +537,10 @@ footer[role=footer] {
         height: auto !important;
         margin: 0; }
 
+@media (min-width: 768px) {
+  .reverse-on-desktop {
+    flex-direction: row-reverse !important; } }
+
 .earnings {
   display: flex;
   flex-direction: column;

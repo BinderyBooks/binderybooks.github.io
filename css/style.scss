@@ -696,6 +696,12 @@ footer[role=footer] {
   }
 }
 
+.reverse-on-desktop {
+  @media (min-width: 768px) {
+    flex-direction: row-reverse !important;
+  }
+}
+
 .earnings {
   display: flex;
   flex-direction: column;
