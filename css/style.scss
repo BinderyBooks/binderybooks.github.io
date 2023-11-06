@@ -381,12 +381,16 @@ footer[role=footer] {
   .tastemakers {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 2em 0;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
     .tastemaker {
       position: relative;
       max-width: 10em;
-      margin: 0 1em;
+      margin: 1em 1em;
       img {
         width: 100%;
         height: auto;

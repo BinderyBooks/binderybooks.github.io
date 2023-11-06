@@ -289,12 +289,16 @@ footer[role=footer] {
   .tastemaker-block .tastemakers {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 2em 0; }
+    padding: 2em 0;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto; }
     .tastemaker-block .tastemakers .tastemaker {
       position: relative;
       max-width: 10em;
-      margin: 0 1em; }
+      margin: 1em 1em; }
       .tastemaker-block .tastemakers .tastemaker img {
         width: 100%;
         height: auto;
