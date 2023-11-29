@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "live-server",
+    "dev": "live-server",
     "sass": "node-sass --watch css/style.scss -o css"
   },
   "dependencies": {
